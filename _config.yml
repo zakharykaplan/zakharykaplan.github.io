@@ -51,8 +51,6 @@ analytics: # Google Analytics
 markdown: kramdown
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
-  - jemoji
 
 # Exclude from processing.
 # The following items will not be processed, by default.
