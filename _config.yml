@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -18,21 +18,45 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Zakhary Kaplan
+email: zakharykaplan@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://zakharykaplan.ca" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: # add your Twitter handle
+github_username:  zakharykaplan
+
+# Author Settings
+author: "%title%" # add your name
+author-img: zakharykaplan.jpeg # add your photo
+author-about: I am a software developer, soon to be computer engineer. # add description
+
+# Social settings
+social-twitter: # add your Twitter handle
+social-facebook: # add your Facebook handle
+social-github: zakharykaplan # add your Github handle
+social-linkedin: zakharykaplan # add your Linkedin handle
+social-email: zakharykaplan@gmail.com # add your Email address
+
+# Disqus
+discus-identifier: # add your discus identifier
+
+# Tracker
+analytics: # Google Analytics
 
 # Build settings
-theme: minima
+markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jemoji
+
+paginate: 8
+paginate_path: "/page/:num"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -53,3 +77,5 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
