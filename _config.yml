@@ -24,6 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
+permalink: ":title"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://zakharykaplan.ca" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -31,14 +32,14 @@ url: "https://zakharykaplan.ca" # the base hostname & protocol for your site, e.
 author:
   name: Zakhary Kaplan # add your name
   img: zakharykaplan.jpeg # add your photo
-  about: I am a software developer and computer engineer in training. # add description
+  about: I am a software developer and computer engineer in training. # add an about section
 
 # Social settings
 social:
   twitter: # add your Twitter handle
   facebook: # add your Facebook handle
   github: zakharykaplan # add your Github handle
-  linkedin: zakharykaplan # add your Linkedin handle
+  linkedin: zakharykaplan # add your LinkedIn handle
   email: zakharykaplan@gmail.com # add your Email address
 
 # Disqus
@@ -51,6 +52,11 @@ analytics: # Google Analytics
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+
+paginate: 8
+paginate_path: "/page/:num"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

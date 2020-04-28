@@ -1,11 +1,8 @@
 ---
-layout: page
+layout: home
 title: About
-permalink: /about
 ---
 
-## Welcome to another page
+## About Me
 
-_yay_
-
-[back](./)
+Here's a description of myself!

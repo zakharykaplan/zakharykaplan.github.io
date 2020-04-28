@@ -1,11 +1,11 @@
 ---
-layout: home
-title: Home
+layout: page
+title: Jekyll
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](./about.md).
+[Link to another page](./another-page.md).
 
 There should be whitespace between paragraphs.
 
