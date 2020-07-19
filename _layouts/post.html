@@ -5,14 +5,14 @@ layout: main
 <article class="article-page">
   <div class="page-content">
     {% if page.img %}
-    <div class="page-cover-image">
-      <figure>
-        <img class="page-image" src={{ "/assets/img/" | prepend: site.baseurl | append: page.img }} alt="{{ page.title }}">
-        {% if page.fig-caption %}
-          <figcaption>{{ page.fig-caption }}</figcaption>
-        {% endif %}
-      </figure>
-    </div> <!-- End Page Cover Image -->
+      <div class="page-cover-image">
+        <figure>
+          <img class="page-image" src={{ "/assets/img/" | prepend: site.baseurl | append: page.img }} alt="{{ page.title }}">
+          {% if page.fig-caption %}
+            <figcaption>{{ page.fig-caption }}</figcaption>
+          {% endif %}
+        </figure>
+      </div> <!-- page cover image -->
     {% endif %}
     <div class="wrap-content">
       <header class="header-page">
@@ -32,6 +32,6 @@ layout: main
         </div>
       </div>
       {% include disqus.html %}
-    </div> <!-- End Wrap Content -->
-  </div> <!-- End Page Content -->
-</article> <!-- End Article Page -->
+    </div> <!-- wrap content -->
+  </div> <!-- page content -->
+</article> <!-- article page -->
