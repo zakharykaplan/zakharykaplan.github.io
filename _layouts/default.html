@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-CA" }}">
+
   {% include head.html %}
+
   <body>
     <div class="wrapper">
-      {{ content }}
+
+      {% include sidebar.html %}
+
+      <div class="content-box clearfix">
+        {{ content }}
+      </div>
+
+      {% include analytics.html %}
+
     </div>
-    {% include analytics.html %}
   </body>
 </html>
