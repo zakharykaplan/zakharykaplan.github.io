@@ -34,6 +34,10 @@ author:
   img: zakharykaplan.jpeg # add your photo
   about: I am a software developer and computer engineer in training. # add an about section
 
+# General settings
+general:
+  date_format: "%d %b, %Y"
+
 # Social settings
 social:
   twitter: # add your Twitter handle
