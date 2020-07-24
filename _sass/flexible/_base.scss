@@ -1,7 +1,9 @@
-@import 'navigation';
-@import 'normalize';
-@import 'syntax';
-@import 'variables';
+@import "variables";
+@import
+  "home-page",
+  "post-page",
+  "tag",
+  "media";
 
 *, *::after, *::before {
   box-sizing: border-box;
@@ -136,15 +138,3 @@ table tfoot td {
 .clearfix::after {
   clear: both;
 }
-
-/* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
-@import 'parts/home-page';
-
-/* - - - - - - - - - - Post Page Styles - - - - - - - - - - */
-@import 'parts/post-page';
-
-/* - - - - - - - - - - Tag Styles - - - - - - - - - - */
-@import 'parts/tag';
-
-/* - - - - - - - - - - Media Styles - - - - - - - - - - */
-@import 'media';
