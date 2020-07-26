@@ -4,16 +4,16 @@ layout: default
 
 <article class="article-page">
   <div class="page-content">
-    {% if page.img %}
+    {%- if page.img -%}
       <div class="page-cover-image">
         <figure>
           <img class="page-image" src={{ "/assets/img/" | append: page.img | relative_url }} alt="{{ page.title }}">
-          {% if page.fig-caption %}
+          {%- if page.fig-caption -%}
             <figcaption>{{ page.fig-caption }}</figcaption>
-          {% endif %}
+          {%- endif -%}
         </figure>
       </div> <!-- page cover image -->
-    {% endif %}
+    {%- endif -%}
 
     <div class="wrap-content">
       {{ content }}
