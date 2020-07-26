@@ -32,7 +32,9 @@ url: "https://zakharykaplan.ca" # the base hostname & protocol for your site, e.
 author:
   name: Zakhary Kaplan # add your name
   img: zakharykaplan.jpeg # add your photo
-  about: I am a software developer and computer engineer in training. # add an about section
+  about: >- # add an about section
+    I am a Computer Engineering student and software developer with a
+    passion for exploring the world of computing.
 
 # General settings
 general:
