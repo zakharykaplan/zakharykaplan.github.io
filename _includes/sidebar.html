@@ -2,7 +2,7 @@
   <header>
     <div class="about">
       <div class="cover-author-image">
-        <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/assets/img/{% if site.author.img %}{{ site.author.img }}{% endif %}" alt="{{ site.author.name }}"></a>
+        <a href="{{ "/" | relative_url }}"><img src="{{ "/assets/img/" | append: site.author.img | relative_url }}" alt="{{ site.author.name }}"></a>
       </div>
       <div class="author-name">{{ site.author.name }}</div>
       <p>{{ site.author.about }}</p>
@@ -24,8 +24,8 @@
         {% if site.social.linkedin %}
           <li class="linkedin"><a href="https://in.linkedin.com/in/{{ site.social.linkedin }}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
         {% endif %}
-        {% if site.social.email %}
-          <li class="email"><a href="mailto:{{ site.social.email }}"><i class="fa fa-envelope-o"></i></a></li>
+        {% if site.email %}
+          <li class="email"><a href="mailto:{{ site.email }}"><i class="fa fa-envelope-o"></i></a></li>
         {% endif %}
       </ul>
     </section> <!-- section contact -->
