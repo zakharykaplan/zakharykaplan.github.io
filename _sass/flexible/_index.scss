@@ -134,8 +134,14 @@ table tfoot td {
   clear: both;
 }
 
-@import
-  "home-page",
-  "post-page",
-  "tag",
-  "media";
+/* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
+@import "parts/home-page";
+
+/* - - - - - - - - - - Post Page Styles - - - - - - - - - - */
+@import "parts/post-page";
+
+/* - - - - - - - - - - Tag Styles - - - - - - - - - - */
+@import "parts/tag";
+
+/* - - - - - - - - - - Media Styles - - - - - - - - - - */
+@import "media";
