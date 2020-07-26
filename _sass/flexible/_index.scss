@@ -1,9 +1,4 @@
 @import "variables";
-@import
-  "home-page",
-  "post-page",
-  "tag",
-  "media";
 
 *, *::after, *::before {
   box-sizing: border-box;
@@ -138,3 +133,9 @@ table tfoot td {
 .clearfix::after {
   clear: both;
 }
+
+@import
+  "home-page",
+  "post-page",
+  "tag",
+  "media";

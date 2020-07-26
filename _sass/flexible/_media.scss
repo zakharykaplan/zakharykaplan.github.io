@@ -1,5 +1,5 @@
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width: 992px) {
   .post {
     width: 48%;
     max-width: 100%;
@@ -23,7 +23,7 @@
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width: 768px) {
   .sidebar {
     position: relative;
     display: flex;
@@ -66,7 +66,7 @@
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width: 480px) {
   .content-box {
     padding: 10px;
   }

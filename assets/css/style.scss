@@ -3,6 +3,5 @@
 ---
 
 @import
-  "normalize",
   "syntax/{{ site.general.syntax | default: 'default' }}",
   "main";
