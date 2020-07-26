@@ -35,7 +35,13 @@ layout: default
         </div>
       </div>
 
-      {% include disqus.html %}
+      {% if site.disqus.shortname %}
+        <section class="comment-area">
+          <div class="comment-wrapper">
+            {% include disqus_comments.html %}
+          </div>
+        </section> <!-- comment area -->
+      {% endif %}
 
     </div> <!-- wrap content -->
   </div> <!-- page content -->

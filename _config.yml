@@ -46,11 +46,12 @@ social:
   linkedin: zakharykaplan # add your LinkedIn handle
   email: zakharykaplan@gmail.com # add your Email address
 
-# Disqus
-discus-identifier: # add your discus identifier
+# Google Analytics
+google_analytics: # add your Google Analytics identifier
 
-# Tracker
-analytics: # Google Analytics
+# Disqus
+disqus:
+  shortname: # add your Disqus identifier
 
 # Build settings
 markdown: kramdown
