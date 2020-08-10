@@ -86,4 +86,3 @@ exclude:
 # Repo specific excludes
   - CNAME
   - README.md
-  - docker-compose.yml
