@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<article class="article-page">
+  <div class="page-content">
+    {%- if page.img -%}
+      <div class="page-cover-image">
+        <figure>
+          <img class="page-image" src={{ "/assets/img/" | append: page.img | relative_url }} alt="{{ page.title }}">
+          {%- if page.fig-caption -%}
+            <figcaption>{{ page.fig-caption }}</figcaption>
+          {%- endif -%}
+        </figure>
+      </div> <!-- page cover image -->
+    {%- endif -%}
+
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">{{ page.title }}</h1>
+        <div class="page-date"><span>{{ page.date | date: site.general.date_format }}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+
+      {{ content }}
+
+    </div> <!-- wrap content -->
+  </div> <!-- page content -->
+</article> <!-- article page -->

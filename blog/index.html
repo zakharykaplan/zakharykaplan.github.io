@@ -1,0 +1,20 @@
+---
+layout: default
+title: Blog
+---
+
+{%- for post in paginator.posts -%}
+  <article class="post" style="cursor: pointer;" onclick="window.location.href='{{ post.url | relative_url }}'">
+    {%- if post.img -%}
+      <a class="post-thumbnail" style="background-image: url({{ "/assets/img/" | append: post.img | relative_url }})"/>
+    {%- endif -%}
+    <div class="post-content">
+      <h2 class="post-title"><a>{{ post.title }}</a></h2>
+      <p>{{ post.content | strip_html | truncatewords: 15 }}</p>
+      <span class="post-date">{{ post.date | date: site.general.date_format }}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+      <span class="post-words">{%- capture words -%}{{ post.content | number_of_words }}{%- endcapture -%}{%- unless words contains "-" -%}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{%- endunless -%}</span>
+    </div>
+  </article>
+{%- endfor -%}
+
+{%- include pagination.html -%}
