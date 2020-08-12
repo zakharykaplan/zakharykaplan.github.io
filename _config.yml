@@ -21,9 +21,8 @@
 title: Zakhary Kaplan
 email: zakharykaplan@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Homepage of Zakhary Kaplan, Computer Engineering student at the
+  University of Toronto. Check out my latest projects or connect with me.
 permalink: "/blog/:title"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://zakharykaplan.ca" # the base hostname & protocol for your site, e.g. http://example.com
