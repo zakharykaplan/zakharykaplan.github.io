@@ -17,7 +17,7 @@ Feel free to explore [my GitHub](https://github.com/zakharykaplan) to see some o
 
 ### Work
 
-In my second year of undergraduate studies, I was a member of the iQua Research Group and worked on several machine learning related projects, the findings of one of which were published in a paper accepted into 2020 IEEE INFOCOM.
+In my second year of undergraduate studies, I was a member of the [iQua Research Group](https://iqua.ece.toronto.edu) and worked on several machine learning related projects, the findings of one of which were published in a paper accepted into 2020 IEEE INFOCOM.
 
 More recently, this past summer, I worked as a software developer for [Geomechanica Inc](https://www.geomechanica.com), during which time I had the opportunity to solve complex problems developing features for Irazu, their geomechanical simulation software.
 
