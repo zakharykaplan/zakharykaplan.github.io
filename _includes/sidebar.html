@@ -13,10 +13,10 @@
       <h3 class="contact-title">Contact me</h3>
       <ul>
         {%- if site.social.twitter -%}
-          <li><a href="https://twitter.com/{{ site.social.twitter }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="https://twitter.com/{{ site.social.twitter }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
         {%- endif -%}
         {%- if site.social.facebook -%}
-          <li><a href="https://facebook.com/{{ site.social.facebook }}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="https://facebook.com/{{ site.social.facebook }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
         {%- endif -%}
         {%- if site.social.github -%}
           <li class="github"><a href="https://github.com/{{ site.social.github }}" target="_blank"><i class="fa fa-github"></i></a></li>
@@ -26,6 +26,9 @@
         {%- endif -%}
         {%- if site.email -%}
           <li class="email"><a href="mailto:{{ site.email }}"><i class="fa fa-envelope-o"></i></a></li>
+        {%- endif -%}
+        {%- if site.author.resume -%}
+          <li><a href="{{ site.author.resume | relative_url }}" target="_blank"><i class="fa fa-briefcase"></i></a></li>
         {%- endif -%}
       </ul>
     </section> <!-- section contact -->

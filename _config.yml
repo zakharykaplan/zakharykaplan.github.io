@@ -34,6 +34,7 @@ author:
   about: >- # add an about section
     I am a Computer Engineering student and software developer with a
     passion for exploring the world of computing.
+  resume: resume.pdf # add path to your resume
 
 # General settings
 general:
