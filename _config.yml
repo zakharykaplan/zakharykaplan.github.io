@@ -30,15 +30,15 @@ url: "https://zakharykaplan.ca" # the base hostname & protocol for your site, e.
 # Author settings
 author:
   name: Zakhary Kaplan # add your name
-  img: zakharykaplan.jpeg # add your photo
+  img: "zakharykaplan.jpeg" # add your photo
   about: >- # add an about section
     I am a Computer Engineering student and software developer with a
     passion for exploring the world of computing.
-  resume: resume.pdf # add path to your resume
+  resume: "resume.pdf" # add path to your resume
 
-# General settings
-general:
-  date_format: "%d %b, %Y"
+# Format settings
+format:
+  date: "%d %b, %Y"
 
 # Social settings
 social:
@@ -55,12 +55,12 @@ disqus:
   shortname: # add your Disqus identifier
 
 # Build settings
-markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
 
+# Pagination settings
 paginate: 8
 paginate_path: "/blog/:num"
 
@@ -72,17 +72,14 @@ paginate_path: "/blog/:num"
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-# Repo specific excludes
-  - CNAME
-  - README.md
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

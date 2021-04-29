@@ -3,5 +3,5 @@
 ---
 
 @import
-  "syntax/{{ site.general.syntax | default: 'default' }}",
+  "syntax/{{ site.style.syntax | default: 'rouge' }}",
   "main";
