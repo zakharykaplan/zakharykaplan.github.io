@@ -1,0 +1,56 @@
+// Screen
+$screen-sm: 35.5rem;
+$screen-md: 48rem;
+$screen-lg: 64rem;
+$screen-xl: 80rem;
+
+// Sidebar
+$sidebar-width: 16rem;
+
+:root {
+  // Colour
+  --border-color: var(--oc-gray-4);
+  --code-color-bg: var(--oc-gray-1);
+  --heading-color: var(--oc-black);
+  --link-color: var(--oc-blue-9);
+  --link-hover-color: var(--oc-blue-7);
+  --link-visited-color: var(--oc-violet-9);
+  --link-visited-hover-color: var(--oc-violet-7);
+  --main-color-bg: var(--oc-gray-0);
+  --main-color: var(--oc-gray-9);
+  --second-color-bg: var(--oc-gray-2);
+
+  // Font
+  --font-family-mono: 'Fira Code';
+  --font-family-sans: 'Cabin';
+  --font-family-serif: 'Playfair Display';
+
+  // Text
+  --font-size: 16px;
+  --line-height: 1.5;
+
+  // Shape
+  --border-radius: .5em;
+
+  // Spacing
+  --spacer: 1rem;
+  --spacer-2: calc(var(--spacer) * 2);
+  --spacer-3: calc(var(--spacer) * 3);
+  --spacer-half: calc(var(--spacer) / 2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    // Colour
+    --border-color: var(--oc-gray-7);
+    --code-color-bg: var(--oc-gray-7);
+    --heading-color: var(--oc-white);
+    --link-color: var(--oc-blue-4);
+    --link-hover-color: var(--oc-blue-6);
+    --link-visited-color: var(--oc-indigo-4);
+    --link-visited-hover-color: var(--oc-indigo-6);
+    --main-color-bg: var(--oc-gray-9);
+    --main-color: var(--oc-gray-4);
+    --second-color-bg: var(--oc-gray-8);
+  }
+}

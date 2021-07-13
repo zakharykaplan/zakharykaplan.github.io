@@ -1,0 +1,12 @@
+.unlink a,
+a.unlink {
+  color: inherit;
+  text-decoration: none;
+
+  &:visited,
+  &:visited:hover,
+  &:hover,
+  &:focus {
+    color: inherit;
+  }
+}

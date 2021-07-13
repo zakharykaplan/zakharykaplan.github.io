@@ -1,0 +1,15 @@
+- title: facebook
+  url: "https://facebook.com/"
+  icon: "fa-facebook"
+- title: instagram
+  url: "https://www.instagram.com/"
+  icon: "fa-instagram"
+- title: twitter
+  url: "https://twitter.com/"
+  icon: "fa-twitter"
+- title: linkedin
+  url: "https://in.linkedin.com/in/"
+  icon: "fa-linkedin"
+- title: github
+  url: "https://github.com/"
+  icon: "fa-github"

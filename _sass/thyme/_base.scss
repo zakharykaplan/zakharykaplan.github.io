@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  color: var(--main-color);
+  background-color: var(--main-color-bg);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--font-family-serif);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+
+  &:visited {
+    color: var(--link-visited-color);
+
+    &:hover,
+    &:focus {
+      color: var(--link-visited-hover-color);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+  }
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--spacer);
+}
+
+ul,
+ol,
+dl {
+  margin-top: 0;
+  margin-bottom: var(--spacer);
+}
+
+blockquote {
+  margin: 0 0 var(--spacer) 0;
+  padding: 0 var(--spacer);
+  border-left: .25em solid var(--border-color);
+  opacity: .65;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  margin-bottom: var(--spacer);
+  font-size: .85em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin-top: 0;
+  margin-bottom: var(--spacer);
+  border-radius: var(--border-radius);
+}
+
+code,
+pre {
+  font-family: var(--font-family-mono);
+}
+
+code {
+  padding: .1em .25em;
+  border-radius: var(--border-radius);
+  background-color: var(--code-bg-color);
+}
+
+pre {
+  display: block;
+  overflow: auto;
+  padding: var(--spacer);
+  margin: var(--spacer) 0;
+
+  code {
+    padding: 0;
+    background-color: inherit;
+  }
+}
+
+table {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: var(--spacer);
+  border: 0 solid var(--border-color);
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: .25em .5em;
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: inherit;
+}
+
+th {
+  text-align: left;
+}
+
+thead th {
+  border-bottom-color: currentColor;
+}
+
+mark {
+  padding: .15em;
+  border-radius: var(--border-radius);
+  color: var(--main-bg-color);
+  background-color: var(--info-color); // XXX
+}
+
+hr {
+  position: relative;
+  margin: var(--spacer-2) 0;
+  border: 0;
+  border-top: 1px solid var(--border-color);
+}
+
+abbr {
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &[title] {
+    cursor: help;
+    border-bottom: 1px dotted var(--border-color);
+  }
+}

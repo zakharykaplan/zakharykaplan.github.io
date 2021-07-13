@@ -1,0 +1,14 @@
+.socials {
+  display: flex;
+  justify-content: center;
+  margin: var(--spacer);
+  padding: 0;
+  list-style: none;
+
+  .social-item {
+    @extend .unlink;
+    margin-left: var(--spacer-half);
+    margin-right: var(--spacer-half);
+  }
+}
+

@@ -2,48 +2,57 @@
 layout: default
 ---
 
-<article class="article-page">
-  <div class="page-content">
-    {%- if page.img -%}
-      <div class="page-cover-image">
-        <figure>
-          <img class="page-image" src={{ "/assets/img/" | append: page.img | relative_url }} alt="{{ page.title }}">
-          {%- if page.fig-caption -%}
-            <figcaption>{{ page.fig-caption }}</figcaption>
-          {%- endif -%}
-        </figure>
-      </div> <!-- page cover image -->
-    {%- endif -%}
+<article class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
 
-    <div class="wrap-content">
-      <header class="header-page">
-        <h1 class="page-title">{{ page.title }}</h1>
-        <div class="page-date"><span>{{ page.date | date: site.format.date }}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
-      </header>
+  <div class="post-meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      {{ page.date | date_to_string }}
+    </time>
+    {% if page.last_modified_at %}
+      <span>&nbsp;~&nbsp;</span>
+      {% assign mdate = page.last_modified_at | date_to_xmlschema %}
+      <time datetime="{{ mdate }}" itemprop="dateModified">
+        {{ mdate | date_to_string }}
+      </time>
+    {% endif %}
+    {% if page.author %}
+      <span>&nbsp;&bull;&nbsp;</span>
+      {% for author in page.author %}
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          {{ author }}
+        </span>
+        {% if forloop.last == false %}, {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% if page.categories.size > 0 %}
+      <span>&nbsp;&bull;&nbsp;</span>
+      <span class="post-categories-section">
+        <i class="post-categories-icon fas fa-folder"></i>
+        <ul class="post-categories">
+          {% for category in page.categories %}
+            <li>
+              <a class="post-category" href="{{ '/blog/categories' | relative_url }}#{{ category | slugify }}">{{ category }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </span>
+    {% endif %}
+    {% if page.tags.size > 0 %}
+      <span>&nbsp;&bull;&nbsp;</span>
+      <span class="post-tags-section">
+        <i class="post-tags-icon fas fa-tag"></i>
+        <ul class="post-tags">
+          {% for tag in page.tags %}
+            <li>
+              {% assign tag = tag | slugify %}
+                <a class="post-tag" href="{{ '/blog/tags' | relative_url }}#{{ tag }}">#{{ tag }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </span>
+    {% endif %}
+  </div>
 
-      {{ content }}
-
-      <div class="page-footer">
-        <div class="page-share">
-          <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
-          <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
-        </div>
-        <div class="page-tag">
-          {%- for tag in page.tags -%}
-            <a href="{{ site.baseurl }}/tags#{{ tag }}" class="tag">&#35;{{ tag }}</a>
-          {%- endfor -%}
-        </div>
-      </div>
-
-      {%- if site.disqus.shortname -%}
-        <section class="comment-area">
-          <div class="comment-wrapper">
-
-            {%- include disqus_comments.html -%}
-
-          </div>
-        </section> <!-- comment area -->
-      {%- endif -%}
-    </div> <!-- wrap content -->
-  </div> <!-- page content -->
-</article> <!-- article page -->
+  {{ content }}
+</article>

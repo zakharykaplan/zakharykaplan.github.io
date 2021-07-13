@@ -1,0 +1,149 @@
+.posts {
+  display: flex;
+  flex-direction: column;
+
+  .post {
+    @extend .tile;
+    display: flex;
+    margin-bottom: var(--spacer);
+    overflow: hidden;
+
+    .post-item {
+      order: 0;
+      flex-grow: 1;
+      padding: var(--spacer);
+    }
+
+    .post-excerpt {
+      max-width: auto;
+      margin-bottom: 0;
+    }
+
+    .post-img {
+      order: 1;
+      width: 10rem;
+      margin: 0 0 0 auto;
+      padding: 0;
+      border-radius: 0;
+      object-fit: cover;
+      vertical-align: middle;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    .post {
+      flex-direction: column;
+
+      .post-item {
+        order: 1;
+      }
+
+      .post-img {
+        order: 0;
+        height: 10rem;
+        width: 100%;
+      }
+    }
+  }
+
+  @media
+  screen and (min-width: $screen-sm) and (max-width: $screen-md),
+  screen and (min-width: $screen-xl) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .post {
+      width: calc(50% - var(--spacer));
+      margin-left: var(--spacer-half);
+      margin-right: var(--spacer-half);
+    }
+  }
+}
+
+.page,
+.post {
+  margin-bottom: var(--spacer-2);
+}
+
+.page-title,
+.post-title {
+  margin-top: 0;
+
+  a {
+    color: inherit;
+  }
+}
+
+.post-meta {
+  display: block;
+  margin-top: -.5em;
+  margin-bottom: var(--spacer);
+  opacity: .65;
+  font-size: .85em;
+}
+
+.post-categories,
+.post-tags {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: .4em;
+    }
+  }
+}
+
+.post-category {
+  border-bottom: 2px dotted var(--border-color);
+}
+
+a.post-category {
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    border-bottom-style: solid;
+    border-color: var(--main-color);
+    text-decoration: none;
+  }
+}
+
+.post-tag {
+  padding: .1em .5em;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--second-color-bg);
+}
+
+a.post-tag {
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+// Footnote number within body text
+a[href^="#fn:"],
+// Back to footnote link
+a[href^="#fnref:"] {
+  display: inline-block;
+  margin-left: .1em;
+  font-weight: bold;
+}
+// List of footnotes
+.footnotes {
+  margin-top: var(--spacer-2);
+  font-size: 85%;
+}

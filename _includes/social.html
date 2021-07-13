@@ -1,0 +1,26 @@
+<div class="socials">
+  {% for social in site.data.social %}
+    {% assign username = site.social[social.title] %}
+    {% if username %}
+      <li class="social-item">
+        <a href="{{ social.url }}{{ username }}" target="_blank">
+          <i class="fab {{ social.icon }}"></i>
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+  {% if site.email %}
+    <li class="social-item">
+      <a href="mailto:{{ site.email }}" target="_blank">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  {% endif %}
+  {% if site.author.resume %}
+    <li class="social-item">
+      <a href="{{ site.author.resume | relative_url }}" target="_blank">
+        <i class="fas fa-briefcase"></i>
+      </a>
+    </li>
+  {% endif %}
+</div>

@@ -13,7 +13,7 @@ I'm fascinated by the incredible things one can do with computers; I strive to u
 
 ### Projects
 
-Feel free to explore [my GitHub](https://github.com/zakharykaplan) to see some of my projects. They're definitely worth checking out!
+Feel free to explore my [GitHub](https://github.com/zakharykaplan) to see some of my projects. They're definitely worth checking out!
 
 ### Work
 

@@ -42,17 +42,11 @@ format:
 
 # Social settings
 social:
-  twitter: # add your Twitter handle
   facebook: # add your Facebook handle
-  github: zakharykaplan # add your Github handle
+  instagram: # add your Instagram handle
+  twitter: # add your Twitter handle
   linkedin: zakharykaplan # add your LinkedIn handle
-
-# Google Analytics
-google_analytics: # add your Google Analytics identifier
-
-# Disqus
-disqus:
-  shortname: # add your Disqus identifier
+  github: zakharykaplan # add your GitHub handle
 
 # Build settings
 plugins:

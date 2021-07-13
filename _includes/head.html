@@ -4,109 +4,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/img/favicon/apple-touch-icon.png" | relative_url }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/img/favicon/favicon-32x32.png" | relative_url }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/img/favicon/favicon-16x16.png" | relative_url }}">
-  <link rel="manifest" href="{{ "/assets/img/favicon/site.webmanifest" | relative_url }}">
-  <link rel="mask-icon" href="{{ "/assets/img/favicon/safari-pinned-tab.svg" | relative_url }}" color="#263959">
-  <link rel="shortcut icon" type="image/x-icon" href="{{ "/assets/img/favicon/favicon.ico" | relative_url  }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/favicon/apple-touch-icon.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/img/favicon/favicon-16x16.png' | relative_url }}">
+  <link rel="manifest" href="{{ '/assets/img/favicon/site.webmanifest' | relative_url }}">
+  <link rel="mask-icon" href="{{ '/assets/img/favicon/safari-pinned-tab.svg' | relative_url }}" color="#263959">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/img/favicon/favicon.ico' | relative_url  }}">
 
   <!-- Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Lato:300,400,700&display=swap">
-  <link rel="stylesheet" href="{{ "/assets/fonts/font-awesome/css/font-awesome.min.css" | relative_url }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-color/1.8.0/open-color.min.css">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
   <!-- Title -->
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description }}">
-
-  <!-- Analytics -->
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
-  {%- endif -%}
-
-  <!-- <!-1- Edit site and author settings in `_config.yml` to make the social details your own -1-> -->
-  <!-- <meta content="{{ site.title }}" property="og:site_name"> -->
-
-  <!-- {%- if page.title -%} -->
-  <!--   <meta content="{{ page.title }}" property="og:title"> -->
-  <!-- {%- else -%} -->
-  <!--   <meta content="{{ site.title }}" property="og:title"> -->
-  <!-- {%- endif -%} -->
-
-  <!-- {%- if page.title -%} -->
-  <!--   <meta content="article" property="og:type"> -->
-  <!-- {%- else -%} -->
-  <!--   <meta content="website" property="og:type"> -->
-  <!-- {%- endif -%} -->
-
-  <!-- {%- if page.description -%} -->
-  <!--   <meta content="{{ page.description }}" property="og:description"> -->
-  <!-- {%- else -%} -->
-  <!--   <meta content="{{ site.description }}" property="og:description"> -->
-  <!-- {%- endif -%} -->
-
-  <!-- {%- if page.url -%} -->
-  <!--   <meta content="{{ page.url | absolute_url }}" property="og:url"> -->
-  <!-- {%- endif -%} -->
-
-  <!-- {%- if page.date -%} -->
-  <!--   <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time"> -->
-  <!--   <meta content="{{ "/about" | absolute_url }}" property="article:author"> -->
-  <!-- {%- endif -%} -->
-
-  <!-- {%- if page.img -%} -->
-  <!--   <meta content="{{ "/assets/img/" | append: page.img | absolute_url }}" property="og:image"> -->
-  <!-- {%- else -%} -->
-  <!--   <meta content="{{ "/assets/img/" | append: site.author.img | absolute_url }}" property="og:image"> -->
-  <!-- {%- endif -%} -->
-
-  <!-- {%- if page.categories -%} -->
-  <!--   {%- for category in page.categories limit:1 -%} -->
-  <!--     <meta content="{{ category }}" property="article:section"> -->
-  <!--   {%- endfor -%} -->
-  <!-- {%- endif -%} -->
-
-  <!-- {%- if page.tags -%} -->
-  <!--   {%- for tag in page.tags -%} -->
-  <!--     <meta content="{{ tag }}" property="article:tag"> -->
-  <!--   {%- endfor -%} -->
-  <!-- {%- endif -%} -->
-
-  <!-- <meta name="twitter:card" content="summary"> -->
-  <!-- <meta name="twitter:site" content="@{{ site.social.twitter }}"> -->
-  <!-- <meta name="twitter:creator" content="@{{ site.social.twitter }}"> -->
-
-  <!-- {%- if page.title -%} -->
-  <!--   <meta name="twitter:title" content="{{ page.title }}"> -->
-  <!-- {%- else -%} -->
-  <!--   <meta name="twitter:title" content="{{ site.title }}"> -->
-  <!-- {%- endif -%} -->
-  <!-- {%- if page.url -%} -->
-  <!--   <meta name="twitter:url" content="{{ page.url | absolute_url }}"> -->
-  <!-- {%- endif -%} -->
-  <!-- {%- if page.description -%} -->
-  <!--   <meta name="twitter:description" content="{{ page.description }}"> -->
-  <!-- {%- else -%} -->
-  <!--   <meta name="twitter:description" content="{{ site.description }}"> -->
-  <!-- {%- endif -%} -->
-  <!-- {%- if page.img -%} -->
-  <!--   <meta name="twitter:image:src" content="{{ "/assets/img/" | append: page.img | absolute_url }}"> -->
-  <!-- {%- else -%} -->
-  <!--   <meta name="twitter:image:src" content="{{ "/assets/img/" | append: site.author.img | absolute_url }}"> -->
-  <!-- {%- endif -%} -->
-
-  <!-- <meta property="og:image" content=""> -->
-
-  <!-- <!-1- Chrome, Firefox OS and Opera -1-> -->
-  <!-- <meta name="theme-color" content="#263959"> -->
-  <!-- <!-1- Windows Phone -1-> -->
-  <!-- <meta name="msapplication-TileColor" content="#da532c"> -->
-  <!-- <meta name="msapplication-config" content="{{ "/assets/img/favicon/browserconfig.xml" | relative_url }}"> -->
-  <!-- <meta name="msapplication-navbutton-color" content="#263959"> -->
-  <!-- <!-1- iOS Safari -1-> -->
-  <!-- <meta name="apple-mobile-web-app-status-bar-style" content="#263959"> -->
 </head>

@@ -1,0 +1,15 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacer-2);
+  text-align: center;
+
+  .pagination-item {
+    padding-left: var(--spacer);
+    padding-right: var(--spacer);
+  }
+
+  a.pagination-item:hover {
+    text-decoration: none;
+  }
+}
