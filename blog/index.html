@@ -11,57 +11,8 @@ title: Blog
 {% endif %}
 
 {% if posts != empty %}
-  <div class="posts">
-    {% for post in posts %}
-      <article class="post" style="cursor: pointer;" onclick="window.location.href='{{ post.url | relative_url }}'">
-        <div class="post-item">
-          <h2 class="post-title">
-            <a>
-              {{ post.title }}
-            </a>
-          </h2>
-          <div class="post-meta">
-            {{ post.date | date: site.format.date }}
-            &nbsp;—&nbsp;
-            {% capture words %}
-              {{ post.content | number_of_words }}
-            {% endcapture %}
-            {% unless words contains "-" %}
-              {{ words | plus: 250 | divided_by: 250 | append: " minute read" }}
-            {% endunless %}
-          </div>
-          <p class="post-excerpt">
-            {{ post.content | strip_html | truncatewords: 15 }}
-          </p>
-        </div>
-        {% if post.img %}
-          <img class="post-img" src="{{ '/assets/img/' | append: post.img | relative_url }}"/>
-        {% endif %}
-      </article>
-    {% endfor %}
-  </div>
-
-  {% if paginator and paginator.total_pages > 1 %}
-    <nav class="pagination" role="pagination">
-      {% if paginator.previous_page %}
-        <a class="pagination-item newer" href="{{ paginator.previous_page_path | relative_url }}">
-          <i class="fas fa-arrow-left" aria-hidden="true"></i>
-        </a>
-      {% else %}
-        <span class="pagination-item newer"></span>
-      {% endif %}
-      <div class="pagination-item">
-        Page {{ paginator.page }} of {{ paginator.total_pages }}
-      </div>
-      {% if paginator.next_page %}
-        <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">
-          <i class="fas fa-arrow-right" aria-hidden="true"></i>
-        </a>
-      {% else %}
-        <span class="pagination-item older"></span>
-      {% endif %}
-    </nav>
-  {% endif %}
+  {% include posts.html %}
+  {% include pagination.html %}
 {% else %}
   {% include empty.html %}
 {% endif %}

@@ -7,15 +7,11 @@ title: Categories
 
 {% if site.categories != empty %}
   <div class="post-meta">
-    <i class="post-categories-icon fas fa-folder"></i>
-    <ul class="post-categories">
-      {% for category in site.categories %}
-        {% assign name = category[0] | slugify %}
-        <li>
-          <a class="post-category" href="#{{ name }}">{{ name }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+    <i class="post-icon fas fa-folder"></i>
+    {% for category in site.categories %}
+      {% assign name = category[0] | slugify %}
+      <a class="post-category" href="#{{ name }}">{{ name }}</a>
+    {% endfor %}
   </div>
 
   {% for category in site.categories %}

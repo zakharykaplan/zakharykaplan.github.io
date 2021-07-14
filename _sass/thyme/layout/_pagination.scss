@@ -1,15 +1,17 @@
 .pagination {
   display: flex;
   justify-content: center;
+  align-items: middle;
+  vertical-align: middle;
+  gap: var(--spacer);
   margin-top: var(--spacer-2);
   text-align: center;
 
-  .pagination-item {
-    padding-left: var(--spacer);
-    padding-right: var(--spacer);
+  p, .pagination-item {
+    padding: var(--spacer) 0;
   }
 
-  a.pagination-item:hover {
-    text-decoration: none;
+  .pagination-item {
+    @extend .icon;
   }
 }

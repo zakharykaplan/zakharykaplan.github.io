@@ -1,12 +1,11 @@
 .tile {
+  @extend .float;
+  @extend .shadow;
   @extend .unlink;
   border: .5px solid var(--border-color);
   border-radius: var(--border-radius);
-  box-shadow: 1px 2px 2px 1px var(--oc-gray-2);
-  transition: all .3s ease;
 
   &:hover {
-    box-shadow: 0 15px 45px -10px var(--oc-gray-4);
-    transform: translate(0, -2px);
+    box-shadow: 0 15px 30px -10px var(--shadow-main-color);
   }
 }

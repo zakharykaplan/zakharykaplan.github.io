@@ -9,48 +9,37 @@ layout: default
     <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
       {{ page.date | date_to_string }}
     </time>
-    {% if page.last_modified_at %}
-      <span>&nbsp;~&nbsp;</span>
-      {% assign mdate = page.last_modified_at | date_to_xmlschema %}
-      <time datetime="{{ mdate }}" itemprop="dateModified">
-        {{ mdate | date_to_string }}
-      </time>
-    {% endif %}
+
     {% if page.author %}
       <span>&nbsp;&bull;&nbsp;</span>
+      {% if page.author.size > 1 %}
+        <i class="post-icon fas fa-users"></i>
+      {% else %}
+        <i class="post-icon fas fa-user"></i>
+      {% endif %}
       {% for author in page.author %}
         <span itemprop="author" itemscope itemtype="http://schema.org/Person">
           {{ author }}
+          {% if forloop.last == false %}, {% endif %}
         </span>
-        {% if forloop.last == false %}, {% endif %}
       {% endfor %}
     {% endif %}
+
     {% if page.categories.size > 0 %}
       <span>&nbsp;&bull;&nbsp;</span>
-      <span class="post-categories-section">
-        <i class="post-categories-icon fas fa-folder"></i>
-        <ul class="post-categories">
-          {% for category in page.categories %}
-            <li>
-              <a class="post-category" href="{{ '/blog/categories' | relative_url }}#{{ category | slugify }}">{{ category }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </span>
+      <i class="post-icon fas fa-folder"></i>
+      {% for category in page.categories %}
+        <a class="post-category" href="{{ '/blog/categories' | relative_url }}#{{ category | slugify }}">{{ category }}</a>
+      {% endfor %}
     {% endif %}
+
     {% if page.tags.size > 0 %}
       <span>&nbsp;&bull;&nbsp;</span>
-      <span class="post-tags-section">
-        <i class="post-tags-icon fas fa-tag"></i>
-        <ul class="post-tags">
-          {% for tag in page.tags %}
-            <li>
-              {% assign tag = tag | slugify %}
-                <a class="post-tag" href="{{ '/blog/tags' | relative_url }}#{{ tag }}">#{{ tag }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </span>
+      <i class="post-icon fas fa-tag"></i>
+      {% for tag in page.tags %}
+        {% assign tag = tag | slugify %}
+        <a class="post-tag" href="{{ '/blog/tags' | relative_url }}#{{ tag }}">#{{ tag }}</a>
+      {% endfor %}
     {% endif %}
   </div>
 

@@ -65,6 +65,12 @@ dl {
   margin-bottom: var(--spacer);
 }
 
+dt {
+  margin-top: var(--spacer-half);
+  font-style: italic;
+  font-weight: var(--font-weight-bold);
+}
+
 blockquote {
   margin: 0 0 var(--spacer) 0;
   padding: 0 var(--spacer);

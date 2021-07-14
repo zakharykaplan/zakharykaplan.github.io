@@ -7,24 +7,21 @@
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
-  top: 0;
-  left: 0;
   width: $sidebar-width;
   height: 100%;
   padding: var(--spacer);
   background-color: var(--second-color-bg);
+  text-align: center;
 }
 
 @media screen and (min-width: $screen-md) {
-  .header,
   .container {
       width: calc(100% - 16rem);
       margin-left: $sidebar-width;
   }
 
   .footer {
-    padding-left: $sidebar-width;
-    padding-right: $sidebar-width;
+    display: none;
   }
 }
 
@@ -33,10 +30,14 @@
     position: relative;
     width: 100%;
   }
+
+  .footer .social {
+    display: none;
+  }
 }
 
 .about {
-  margin: 0 0 40px;
+  margin-bottom: var(--spacer);
   text-align: center;
 
   .author-image {

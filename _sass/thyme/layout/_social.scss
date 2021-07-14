@@ -1,14 +1,11 @@
-.socials {
+.social {
   display: flex;
   justify-content: center;
-  margin: var(--spacer);
-  padding: 0;
+  gap: var(--spacer);
   list-style: none;
 
   .social-item {
-    @extend .unlink;
-    margin-left: var(--spacer-half);
-    margin-right: var(--spacer-half);
+    @extend .icon;
   }
 }
 
