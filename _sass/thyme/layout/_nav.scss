@@ -11,8 +11,7 @@ nav.nav {
     > li.nav-item {
       @extend .float;
       padding: var(--spacer-half);
-      border-bottom-left-radius: var(--border-radius);
-      border-bottom-right-radius: var(--border-radius);
+      border-radius: var(--border-radius);
       border-bottom: 2px solid var(--border-color);
       font-size: 1.15em;
 
@@ -27,16 +26,19 @@ nav.nav {
     }
   }
 
-  li.nav-item:hover > nav.subnav {
-    display: block;
+  li.nav-item {
+    white-space: nowrap;
+
+    &:hover > nav.subnav {
+      display: block;
+    }
   }
 
   nav.subnav {
     display: none;
     position: absolute;
     left: 0;
-    border-bottom-left-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
+    border-radius: var(--border-radius);
     border-bottom: 2px solid var(--border-color);
     background-color: var(--second-color-bg);
     font-size: var(--font-size);
@@ -62,9 +64,7 @@ nav.nav {
 
     nav.subnav {
       top: 0;
-      left: auto;
-      right: -100%;
-      border-top-right-radius: var(--border-radius);
+      left: 100%;
     }
   }
 }
