@@ -1,4 +1,5 @@
 .header {
+  @extend .shadow;
   display: flex;
   align-items: center;
   gap: var(--spacer);

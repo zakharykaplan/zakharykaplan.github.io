@@ -10,6 +10,7 @@ nav.nav {
 
     > li.nav-item {
       @extend .float;
+      @extend .shadow;
       padding: var(--spacer-half);
       border-radius: var(--border-radius);
       border-bottom: 2px solid var(--border-color);
@@ -35,6 +36,7 @@ nav.nav {
   }
 
   nav.subnav {
+    @extend .shadow;
     display: none;
     position: absolute;
     left: 0;
