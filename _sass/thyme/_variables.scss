@@ -5,14 +5,20 @@ $screen-lg: 64rem;
 $screen-xl: 80rem;
 
 :root {
+  // Accent
+  --accent-color-light-1: var(--oc-cyan-9);
+  --accent-color-light-2: var(--oc-cyan-8);
+  --accent-color-dark-1: var(--oc-cyan-6);
+  --accent-color-dark-2: var(--oc-cyan-6);
+
   // Colour
   --border-color: var(--oc-gray-4);
   --code-color-bg: var(--oc-gray-1);
   --heading-color: var(--oc-black);
-  --link-color: var(--oc-blue-9);
-  --link-hover-color: var(--oc-blue-7);
-  --link-visited-color: var(--oc-violet-9);
-  --link-visited-hover-color: var(--oc-violet-7);
+  --link-color: var(--accent-color-light-1);
+  --link-hover-color: var(--accent-color-light-2);
+  --link-visited-color: var(--link-color);
+  --link-visited-hover-color: var(--link-hover-color);
   --main-color-bg: var(--oc-gray-0);
   --main-color: var(--oc-gray-9);
   --second-color-bg: var(--oc-gray-2);
@@ -51,10 +57,10 @@ $screen-xl: 80rem;
     --border-color: var(--oc-gray-8);
     --code-color-bg: var(--oc-gray-7);
     --heading-color: var(--oc-white);
-    --link-color: var(--oc-blue-4);
-    --link-hover-color: var(--oc-blue-6);
-    --link-visited-color: var(--oc-indigo-4);
-    --link-visited-hover-color: var(--oc-indigo-6);
+    --link-color: var(--accent-color-dark-1);
+    --link-hover-color: var(--accent-color-dark-2);
+    --link-visited-color: var(--link-color);
+    --link-visited-hover-color: var(--link-hover-color);
     --main-color-bg: var(--oc-gray-9);
     --main-color: var(--oc-gray-4);
     --second-color-bg: var(--oc-gray-7);
