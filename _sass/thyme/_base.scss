@@ -103,7 +103,7 @@ pre {
 code {
   padding: .1em .25em;
   border-radius: var(--border-radius);
-  background-color: var(--code-bg-color);
+  background-color: var(--code-color-bg);
 }
 
 pre {
@@ -146,8 +146,8 @@ thead th {
 mark {
   padding: .15em;
   border-radius: var(--border-radius);
-  color: var(--main-bg-color);
-  background-color: var(--info-color); // XXX
+  color: var(--main-color-bg);
+  background-color: var(--user-info-color);
 }
 
 hr {

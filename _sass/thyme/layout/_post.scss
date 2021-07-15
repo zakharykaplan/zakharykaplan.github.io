@@ -100,7 +100,6 @@ a.post-category {
 .post-tag {
   @extend .tile;
   padding: .1em .5em;
-  // border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   background-color: var(--second-color-bg);
 }

@@ -4,9 +4,6 @@ $screen-md: 48rem;
 $screen-lg: 64rem;
 $screen-xl: 80rem;
 
-// Sidebar
-$sidebar-width: 16rem;
-
 :root {
   // Colour
   --border-color: var(--oc-gray-4);
@@ -21,6 +18,9 @@ $sidebar-width: 16rem;
   --second-color-bg: var(--oc-gray-2);
   --shadow-main-color: var(--oc-gray-5);
   --shadow-second-color: var(--oc-gray-3);
+  --user-error-color: var(--oc-red-7);
+  --user-info-color: var(--oc-green-7);
+  --user-warning-color: var(--oc-yellow-7);
 
   // Font
   --font-family-mono: 'Fira Code';
@@ -48,7 +48,7 @@ $sidebar-width: 16rem;
 @media (prefers-color-scheme: dark) {
   :root {
     // Colour
-    --border-color: var(--oc-gray-7);
+    --border-color: var(--oc-gray-8);
     --code-color-bg: var(--oc-gray-7);
     --heading-color: var(--oc-white);
     --link-color: var(--oc-blue-4);
@@ -57,8 +57,11 @@ $sidebar-width: 16rem;
     --link-visited-hover-color: var(--oc-indigo-6);
     --main-color-bg: var(--oc-gray-9);
     --main-color: var(--oc-gray-4);
-    --second-color-bg: var(--oc-gray-8);
+    --second-color-bg: var(--oc-gray-7);
     --shadow-main-color: var(--oc-gray-7);
     --shadow-second-color: var(--oc-gray-8);
+    --user-error-color: var(--oc-red-4);
+    --user-info-color: var(--oc-green-4);
+    --user-warning-color: var(--oc-yellow-4);
   }
 }

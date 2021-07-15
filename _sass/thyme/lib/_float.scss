@@ -1,5 +1,5 @@
 .float {
-  transition: all .3s ease;
+  transition: transform .3s ease;
 
   &:hover {
     transform: translate(0, -2px);

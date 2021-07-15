@@ -4,5 +4,13 @@
 
 @charset "utf-8";
 
-@import "syntax/{{ site.style.syntax | default: 'rouge' }}";
+// Thyme theme
 @import "thyme";
+
+// Rouge syntax highlighting
+@media (prefers-color-scheme: light) {
+  @import "syntax/{{ site.style.syntax.light | default: 'base16.light' }}";
+}
+@media (prefers-color-scheme: dark) {
+  @import "syntax/{{ site.style.syntax.dark | default: 'base16.dark' }}";
+}

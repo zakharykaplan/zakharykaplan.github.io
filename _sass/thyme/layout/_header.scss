@@ -1,9 +1,17 @@
 .header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacer);
+  height: 5rem;
   padding: var(--spacer);
+  border-bottom: 2px solid var(--border-color);
   background-color: var(--second-color-bg);
 
   .header-title {
+    @extend .float;
     @extend .unlink;
+    margin: 0 var(--spacer);
+    font-family: var(--font-family-serif);
     font-size: 1.3em;
     font-weight: bold;
 
@@ -11,31 +19,10 @@
       opacity: .5;
     }
   }
-}
 
-// XXX: Move me somewhere else...
-.nav-list {
-  margin: var(--spacer) 0 0 0;
-  padding: 0;
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-  list-style: none;
-
-  li {
-    display: inline-block;
-    margin: 0 .4em;
-  }
-
-  a {
-    color: inherit;
-
-    &:hover,
-    &:focus {
-      text-decoration: line-through;
+  @media screen and (max-width: $screen-md) {
+    .nav {
+      display: none;
     }
-  }
-
-  a.current {
-    text-decoration: line-through;
   }
 }

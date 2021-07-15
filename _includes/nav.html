@@ -6,12 +6,12 @@
           {{ item.title }}
           <i class="fas fa-caret-down"></i>
         </a>
-        <div class="subnav">
+        <nav class="subnav">
           {% include nav.html nav=item.subnav %}
-        </div>
+        </nav>
       {% else %}
         <a href="{{ item.url }}">{{ item.title }}</a>
       {% endif %}
-      </li>
+    </li>
   {% endfor %}
 </ul>

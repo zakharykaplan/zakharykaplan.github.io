@@ -3,7 +3,7 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: var(--spacer-2);
+  margin-bottom: var(--spacer);
   padding: var(--spacer);
   background-color: var(--main-color-bg);
 
@@ -11,6 +11,7 @@
     padding-left: var(--spacer-2);
     padding-right: var(--spacer-2);
   }
+
   @media screen and (min-width: $screen-xl) {
     max-width: $screen-xl;
     padding-left: var(--spacer-3);

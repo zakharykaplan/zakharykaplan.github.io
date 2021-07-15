@@ -1,5 +1,3 @@
-- title: Home
-  url: /
 - title: Blog
   url: /blog
   subnav:
@@ -7,3 +5,5 @@
       url: /blog/categories
     - title: Tags
       url: /blog/tags
+- title: Resume
+  url: /resume.pdf
