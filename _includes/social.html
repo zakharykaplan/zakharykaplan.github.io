@@ -4,7 +4,7 @@
     {% if username %}
       <li class="social-item">
         <a href="{{ social.url }}{{ username }}" target="_blank">
-          <i class="fab {{ social.icon }}"></i>
+          <i class="fab {{ social.icon | default: 'fas fa-link' }}"></i>
         </a>
       </li>
     {% endif %}
@@ -20,6 +20,13 @@
     <li class="social-item">
       <a href="{{ site.author.resume | relative_url }}" target="_blank">
         <i class="fas fa-briefcase"></i>
+      </a>
+    </li>
+  {% endif %}
+  {% if site.repo %}
+    <li class="social-item">
+      <a href="{{ site.repo }}" target="_blank">
+        <i class="far fa-code"></i>
       </a>
     </li>
   {% endif %}
