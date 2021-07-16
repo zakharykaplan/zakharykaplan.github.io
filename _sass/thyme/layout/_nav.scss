@@ -7,7 +7,7 @@ nav.nav {
     white-space: nowrap;
 
     &:hover {
-      background-color: var(--border-color);
+      background-color: var(--main3-color-bg);
 
       > nav.subnav {
         display: block;
@@ -50,7 +50,7 @@ nav.nav {
     left: 0;
     border-radius: var(--border-radius);
     border-bottom: 2px solid var(--border-color);
-    background-color: var(--second-color-bg);
+    background-color: var(--main2-color-bg);
     font-size: var(--font-size);
 
     ul.nav-list {
