@@ -1,6 +1,30 @@
 nav.nav {
   display: inline-block;
 
+  ul.nav-list li.nav-item {
+    padding: 2px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+
+    &:hover {
+      background-color: var(--border-color);
+
+      > nav.subnav {
+        display: block;
+      }
+    }
+
+    &.current {
+      @extend .shadow;
+      background-color: var(--border-color);
+    }
+
+    a {
+      @extend .unlink;
+      padding: var(--spacer-half);
+    }
+  }
+
   > ul.nav-list {
     display: flex;
     gap: var(--spacer);
@@ -15,23 +39,6 @@ nav.nav {
       border-radius: var(--border-radius);
       border-bottom: 2px solid var(--border-color);
       font-size: 1.15em;
-
-      a {
-        @extend .unlink;
-        padding: var(--spacer-half);
-
-        .current {
-          text-decoration: line-through;
-        }
-      }
-    }
-  }
-
-  li.nav-item {
-    white-space: nowrap;
-
-    &:hover > nav.subnav {
-      display: block;
     }
   }
 
@@ -39,6 +46,7 @@ nav.nav {
     @extend .shadow;
     display: none;
     position: absolute;
+    top: 100%;
     left: 0;
     border-radius: var(--border-radius);
     border-bottom: 2px solid var(--border-color);
@@ -49,11 +57,11 @@ nav.nav {
       display: flex;
       flex-direction: column;
       margin: 0;
-      padding: var(--spacer-half);
+      padding: 4px;
 
       li.nav-item {
         @extend .float;
-        padding-top: var(--spacer-half);
+        margin-top: var(--spacer-half);
         list-style: none;
 
         a {

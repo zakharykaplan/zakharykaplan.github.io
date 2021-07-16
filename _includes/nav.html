@@ -1,6 +1,6 @@
 <ul class="nav-list">
   {% for item in include.nav %}
-    <li class="nav-item">
+    <li class="nav-item {% if item.url == page.url %}current{% endif %}">
       {% if item.subnav %}
         <a href="{{ item.url }}">
           {{ item.title }}
